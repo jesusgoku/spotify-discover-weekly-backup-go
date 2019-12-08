@@ -38,3 +38,9 @@ go build -o bin/credentials ./cmd/credentials
 go build -o bin/backup cmd/backup/main.go
 ./bin/backup
 ```
+
+## Tests
+
+```shell
+go test ./cmd/backup
+```
