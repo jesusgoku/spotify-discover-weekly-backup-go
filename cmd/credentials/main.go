@@ -1,10 +1,8 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
-	"strings"
 
 	"github.com/zmb3/spotify"
 
@@ -19,10 +17,7 @@ func main() {
 
 	fmt.Printf("Open then next url on your browser and authorize app: %v\n\n", url)
 
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Enter authorization code: ")
-	authToken, _ := reader.ReadString('\n')
-	authToken = strings.TrimSuffix(authToken, "\n")
+	authToken := Question("Enter authorization code")
 
 	token, err := auth.Exchange(authToken)
 
