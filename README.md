@@ -6,20 +6,35 @@ Backup **Discover Weekly** playlist.
 
 - [dep](https://golang.github.io/dep/)
 
-## Usage
+## Setup
 
 ```shell
 # Install dependencies
 dep ensure -v
 
-# Complete your .env file
+# Complete your .env file or export vars to environment
 cp .env.dist .env
+```
 
+## Usage
+
+```shell
 # Obtain ACCESS_TOKEN and REFRESH_TOKEN and copy to .env file
-go build -o bin/credentials cmd/credentials/main.go
-./bin/credentials
+go run ./cmd/credentials
+
 
 # Backup your playlist
+go run ./cmd/backup
+```
+
+## Build
+
+```shell
+# Obtain credentials
+go build -o bin/credentials ./cmd/credentials
+./bin/credentials
+
+# Backup playlist
 go build -o bin/backup cmd/backup/main.go
 ./bin/backup
 ```
