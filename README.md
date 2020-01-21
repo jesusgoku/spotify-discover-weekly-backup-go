@@ -2,16 +2,9 @@
 
 Backup **Discover Weekly** playlist.
 
-## Requirements
-
-- [dep](https://golang.github.io/dep/)
-
 ## Setup
 
 ```shell
-# Install dependencies
-dep ensure -v
-
 # Complete your .env file or export vars to environment
 cp .env.dist .env
 ```
