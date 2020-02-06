@@ -32,6 +32,12 @@ go build -o bin/backup cmd/backup/main.go
 ./bin/backup
 ```
 
+## Run with Docker
+
+```shell
+docker-compose run [credentials|backup]
+```
+
 ## Tests
 
 ```shell
